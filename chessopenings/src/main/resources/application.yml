@@ -1,0 +1,16 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        name: chessopenings
+        url: jdbc:postgresql://localhost:5050/chessopenings
+        username: cavalierfou
+        password: db780345
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+        show-sql: false
+        
