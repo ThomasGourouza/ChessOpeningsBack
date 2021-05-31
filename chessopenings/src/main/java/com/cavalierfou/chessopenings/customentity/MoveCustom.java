@@ -2,138 +2,110 @@ package com.cavalierfou.chessopenings.customentity;
 
 public class MoveCustom {
 
-	private long id;
-
-	private String blackColumnFrom;
-
-	private String blackColumnTo;
-
-	private String blackLineFrom;
-
-	private String blackLineTo;
-
-	private String blackPiece;
-
-	private long moveNumber;
-
-	private long openingId;
-
-	private String whiteColumnFrom;
-
-	private String whiteColumnTo;
-
-	private String whiteLineFrom;
-
-	private String whiteLineTo;
+	private Long moveNumber;
 
 	private String whitePiece;
+	private String whiteColumnFrom;
+	private String whiteLineFrom;
+	private String whiteColumnTo;
+	private String whiteLineTo;
+
+	private String blackPiece;
+	private String blackColumnFrom;
+	private String blackLineFrom;
+	private String blackColumnTo;
+	private String blackLineTo;
 
 	public MoveCustom() {
 		// default constructor
 	}
 
-	public long getId() {
-		return this.id;
+	public Long getMoveNumber() {
+		return moveNumber;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getBlackColumnFrom() {
-		return this.blackColumnFrom;
-	}
-
-	public void setBlackColumnFrom(String blackColumnFrom) {
-		this.blackColumnFrom = blackColumnFrom;
-	}
-
-	public String getBlackColumnTo() {
-		return this.blackColumnTo;
-	}
-
-	public void setBlackColumnTo(String blackColumnTo) {
-		this.blackColumnTo = blackColumnTo;
-	}
-
-	public String getBlackLineFrom() {
-		return this.blackLineFrom;
-	}
-
-	public void setBlackLineFrom(String blackLineFrom) {
-		this.blackLineFrom = blackLineFrom;
-	}
-
-	public String getBlackLineTo() {
-		return this.blackLineTo;
-	}
-
-	public void setBlackLineTo(String blackLineTo) {
-		this.blackLineTo = blackLineTo;
-	}
-
-	public String getBlackPiece() {
-		return this.blackPiece;
-	}
-
-	public void setBlackPiece(String blackPiece) {
-		this.blackPiece = blackPiece;
-	}
-
-	public long getMoveNumber() {
-		return this.moveNumber;
-	}
-
-	public void setMoveNumber(long moveNumber) {
+	public void setMoveNumber(Long moveNumber) {
 		this.moveNumber = moveNumber;
 	}
 
-	public long getOpeningId() {
-		return this.openingId;
+	public String getWhitePiece() {
+		return whitePiece;
 	}
 
-	public void setOpeningId(long openingId) {
-		this.openingId = openingId;
+	public void setWhitePiece(String whitePiece) {
+		this.whitePiece = whitePiece;
 	}
 
 	public String getWhiteColumnFrom() {
-		return this.whiteColumnFrom;
+		return whiteColumnFrom;
 	}
 
 	public void setWhiteColumnFrom(String whiteColumnFrom) {
 		this.whiteColumnFrom = whiteColumnFrom;
 	}
 
-	public String getWhiteColumnTo() {
-		return this.whiteColumnTo;
-	}
-
-	public void setWhiteColumnTo(String whiteColumnTo) {
-		this.whiteColumnTo = whiteColumnTo;
-	}
-
 	public String getWhiteLineFrom() {
-		return this.whiteLineFrom;
+		return whiteLineFrom;
 	}
 
 	public void setWhiteLineFrom(String whiteLineFrom) {
 		this.whiteLineFrom = whiteLineFrom;
 	}
 
+	public String getWhiteColumnTo() {
+		return whiteColumnTo;
+	}
+
+	public void setWhiteColumnTo(String whiteColumnTo) {
+		this.whiteColumnTo = whiteColumnTo;
+	}
+
 	public String getWhiteLineTo() {
-		return this.whiteLineTo;
+		return whiteLineTo;
 	}
 
 	public void setWhiteLineTo(String whiteLineTo) {
 		this.whiteLineTo = whiteLineTo;
 	}
 
-	public String getWhitePiece() {
-		return this.whitePiece;
+	public String getBlackPiece() {
+		return blackPiece;
 	}
 
-	public void setWhitePiece(String whitePiece) {
-		this.whitePiece = whitePiece;
+	public void setBlackPiece(String blackPiece) {
+		this.blackPiece = blackPiece;
+	}
+
+	public String getBlackColumnFrom() {
+		return blackColumnFrom;
+	}
+
+	public void setBlackColumnFrom(String blackColumnFrom) {
+		this.blackColumnFrom = blackColumnFrom;
+	}
+
+	public String getBlackLineFrom() {
+		return blackLineFrom;
+	}
+
+	public void setBlackLineFrom(String blackLineFrom) {
+		this.blackLineFrom = blackLineFrom;
+	}
+
+	public String getBlackColumnTo() {
+		return blackColumnTo;
+	}
+
+	public void setBlackColumnTo(String blackColumnTo) {
+		this.blackColumnTo = blackColumnTo;
+	}
+
+	public String getBlackLineTo() {
+		return blackLineTo;
+	}
+
+	public void setBlackLineTo(String blackLineTo) {
+		this.blackLineTo = blackLineTo;
 	}
 
 }
