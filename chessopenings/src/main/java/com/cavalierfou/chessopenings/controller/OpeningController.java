@@ -38,9 +38,9 @@ class OpeningController {
 
     @GetMapping
     public ResponseEntity<List<OpeningCustom>> getPlayers(
-            @RequestParam(value = "truc", required = false) String truc) {
+            @RequestParam(value = "name", required = false) String name) {
         try {
-            List<OpeningCustom> openings = openingService.find(truc);
+            List<OpeningCustom> openings = openingService.find(name);
             if (openings.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }

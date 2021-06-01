@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "886434d9-eda2-4611-b185-7cffd79c16ea",
+		"name": "Openings_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "openings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/opening",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"opening"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openings_by_name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/opening?name=italian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"opening"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "italian"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "opening_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/opening/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"opening",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_openings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Test\",\r\n        \"parentOpeningId\": 2,\r\n        \"moves\": [\r\n            {\r\n                \"moveNumber\": 1,\r\n                \"color\": \"W\",\r\n                \"piece\": \"P\",\r\n                \"columnFrom\": \"e\",\r\n                \"lineFrom\": \"2\",\r\n                \"columnTo\": \"e\",\r\n                \"lineTo\": \"4\"\r\n            },\r\n            {\r\n                \"moveNumber\": 1,\r\n                \"color\": \"B\",\r\n                \"piece\": \"P\",\r\n                \"columnFrom\": \"e\",\r\n                \"lineFrom\": \"7\",\r\n                \"columnTo\": \"e\",\r\n                \"lineTo\": \"5\"\r\n            },\r\n            {\r\n                \"moveNumber\": 2,\r\n                \"color\": \"W\",\r\n                \"piece\": \"N\",\r\n                \"columnFrom\": \"g\",\r\n                \"lineFrom\": \"1\",\r\n                \"columnTo\": \"f\",\r\n                \"lineTo\": \"3\"\r\n            },\r\n            {\r\n                \"moveNumber\": 2,\r\n                \"color\": \"B\",\r\n                \"piece\": \"N\",\r\n                \"columnFrom\": \"b\",\r\n                \"lineFrom\": \"8\",\r\n                \"columnTo\": \"c\",\r\n                \"lineTo\": \"6\"\r\n            },\r\n            {\r\n                \"moveNumber\": 3,\r\n                \"color\": \"W\",\r\n                \"piece\": \"B\",\r\n                \"columnFrom\": \"f\",\r\n                \"lineFrom\": \"1\",\r\n                \"columnTo\": \"c\",\r\n                \"lineTo\": \"4\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/opening",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"opening"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/opening/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"opening",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

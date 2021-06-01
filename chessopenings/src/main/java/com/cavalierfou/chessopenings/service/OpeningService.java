@@ -39,15 +39,17 @@ public class OpeningService {
         }
     }
 
-    public List<OpeningCustom> find(String truc) {
-        List<Opening> openings = openingJpaRepository.findAll();
-        List<OpeningCustom> playerCustoms = new ArrayList<>();
-        if (openings.isEmpty()) {
-            return playerCustoms;
-        }
-        openings.forEach(player -> playerCustoms.add(mapToCustom(player)));
+    public List<OpeningCustom> find(String name) {
+        List<Opening> openings = (name != null) ? openingJpaRepository.findByNameContainingIgnoreCase(name)
+                : openingJpaRepository.findAll();
 
-        return playerCustoms;
+        List<OpeningCustom> openingCustoms = new ArrayList<>();
+        if (openings.isEmpty()) {
+            return openingCustoms;
+        }
+        openings.forEach(player -> openingCustoms.add(mapToCustom(player)));
+
+        return openingCustoms;
     }
 
     private OpeningCustom mapToCustom(Opening opening) {
