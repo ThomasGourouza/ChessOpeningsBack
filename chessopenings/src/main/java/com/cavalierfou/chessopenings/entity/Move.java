@@ -19,41 +19,29 @@ public class Move implements Serializable {
 	@Column(name="\"id\"")
 	private long id;
 
-	@Column(name="\"black_column_from\"")
-	private String blackColumnFrom;
-
-	@Column(name="\"black_column_to\"")
-	private String blackColumnTo;
-
-	@Column(name="\"black_line_from\"")
-	private String blackLineFrom;
-
-	@Column(name="\"black_line_to\"")
-	private String blackLineTo;
-
-	@Column(name="\"black_piece\"")
-	private String blackPiece;
+	@Column(name="\"opening_id\"")
+	private long openingId;
 
 	@Column(name="\"move_number\"")
 	private long moveNumber;
 
-	@Column(name="\"opening_id\"")
-	private long openingId;
+	@Column(name="\"color\"")
+	private String color;
 
-	@Column(name="\"white_column_from\"")
-	private String whiteColumnFrom;
+	@Column(name="\"piece\"")
+	private String piece;
 
-	@Column(name="\"white_column_to\"")
-	private String whiteColumnTo;
+	@Column(name="\"column_from\"")
+	private String columnFrom;
 
-	@Column(name="\"white_line_from\"")
-	private String whiteLineFrom;
+	@Column(name="\"line_from\"")
+	private String lineFrom;
 
-	@Column(name="\"white_line_to\"")
-	private String whiteLineTo;
+	@Column(name="\"column_to\"")
+	private String columnTo;
 
-	@Column(name="\"white_piece\"")
-	private String whitePiece;
+	@Column(name="\"line_to\"")
+	private String lineTo;
 
 	public Move() {
 		// default constructor
@@ -67,100 +55,68 @@ public class Move implements Serializable {
 		this.id = id;
 	}
 
-	public String getBlackColumnFrom() {
-		return this.blackColumnFrom;
-	}
-
-	public void setBlackColumnFrom(String blackColumnFrom) {
-		this.blackColumnFrom = blackColumnFrom;
-	}
-
-	public String getBlackColumnTo() {
-		return this.blackColumnTo;
-	}
-
-	public void setBlackColumnTo(String blackColumnTo) {
-		this.blackColumnTo = blackColumnTo;
-	}
-
-	public String getBlackLineFrom() {
-		return this.blackLineFrom;
-	}
-
-	public void setBlackLineFrom(String blackLineFrom) {
-		this.blackLineFrom = blackLineFrom;
-	}
-
-	public String getBlackLineTo() {
-		return this.blackLineTo;
-	}
-
-	public void setBlackLineTo(String blackLineTo) {
-		this.blackLineTo = blackLineTo;
-	}
-
-	public String getBlackPiece() {
-		return this.blackPiece;
-	}
-
-	public void setBlackPiece(String blackPiece) {
-		this.blackPiece = blackPiece;
-	}
-
-	public long getMoveNumber() {
-		return this.moveNumber;
-	}
-
-	public void setMoveNumber(long moveNumber) {
-		this.moveNumber = moveNumber;
-	}
-
 	public long getOpeningId() {
-		return this.openingId;
+		return openingId;
 	}
 
 	public void setOpeningId(long openingId) {
 		this.openingId = openingId;
 	}
 
-	public String getWhiteColumnFrom() {
-		return this.whiteColumnFrom;
+	public long getMoveNumber() {
+		return moveNumber;
 	}
 
-	public void setWhiteColumnFrom(String whiteColumnFrom) {
-		this.whiteColumnFrom = whiteColumnFrom;
+	public void setMoveNumber(long moveNumber) {
+		this.moveNumber = moveNumber;
 	}
 
-	public String getWhiteColumnTo() {
-		return this.whiteColumnTo;
+	public String getColor() {
+		return color;
 	}
 
-	public void setWhiteColumnTo(String whiteColumnTo) {
-		this.whiteColumnTo = whiteColumnTo;
+	public void setColor(String color) {
+		this.color = color;
 	}
 
-	public String getWhiteLineFrom() {
-		return this.whiteLineFrom;
+	public String getPiece() {
+		return piece;
 	}
 
-	public void setWhiteLineFrom(String whiteLineFrom) {
-		this.whiteLineFrom = whiteLineFrom;
+	public void setPiece(String piece) {
+		this.piece = piece;
 	}
 
-	public String getWhiteLineTo() {
-		return this.whiteLineTo;
+	public String getColumnFrom() {
+		return columnFrom;
 	}
 
-	public void setWhiteLineTo(String whiteLineTo) {
-		this.whiteLineTo = whiteLineTo;
+	public void setColumnFrom(String columnFrom) {
+		this.columnFrom = columnFrom;
 	}
 
-	public String getWhitePiece() {
-		return this.whitePiece;
+	public String getLineFrom() {
+		return lineFrom;
 	}
 
-	public void setWhitePiece(String whitePiece) {
-		this.whitePiece = whitePiece;
+	public void setLineFrom(String lineFrom) {
+		this.lineFrom = lineFrom;
+	}
+
+	public String getColumnTo() {
+		return columnTo;
+	}
+
+	public void setColumnTo(String columnTo) {
+		this.columnTo = columnTo;
+	}
+
+	public String getLineTo() {
+		return lineTo;
+	}
+
+	public void setLineTo(String lineTo) {
+		this.lineTo = lineTo;
 	}
 
 }

@@ -4,17 +4,17 @@ public class MoveCustom {
 
 	private Long moveNumber;
 
-	private String whitePiece;
-	private String whiteColumnFrom;
-	private String whiteLineFrom;
-	private String whiteColumnTo;
-	private String whiteLineTo;
+	private String color;
 
-	private String blackPiece;
-	private String blackColumnFrom;
-	private String blackLineFrom;
-	private String blackColumnTo;
-	private String blackLineTo;
+	private String piece;
+
+	private String columnFrom;
+
+	private String lineFrom;
+
+	private String columnTo;
+	
+	private String lineTo;
 
 	public MoveCustom() {
 		// default constructor
@@ -28,84 +28,52 @@ public class MoveCustom {
 		this.moveNumber = moveNumber;
 	}
 
-	public String getWhitePiece() {
-		return whitePiece;
+	public String getColor() {
+		return color;
 	}
 
-	public void setWhitePiece(String whitePiece) {
-		this.whitePiece = whitePiece;
+	public void setColor(String color) {
+		this.color = color;
 	}
 
-	public String getWhiteColumnFrom() {
-		return whiteColumnFrom;
+	public String getPiece() {
+		return piece;
 	}
 
-	public void setWhiteColumnFrom(String whiteColumnFrom) {
-		this.whiteColumnFrom = whiteColumnFrom;
+	public void setPiece(String piece) {
+		this.piece = piece;
 	}
 
-	public String getWhiteLineFrom() {
-		return whiteLineFrom;
+	public String getColumnFrom() {
+		return columnFrom;
 	}
 
-	public void setWhiteLineFrom(String whiteLineFrom) {
-		this.whiteLineFrom = whiteLineFrom;
+	public void setColumnFrom(String columnFrom) {
+		this.columnFrom = columnFrom;
 	}
 
-	public String getWhiteColumnTo() {
-		return whiteColumnTo;
+	public String getLineFrom() {
+		return lineFrom;
 	}
 
-	public void setWhiteColumnTo(String whiteColumnTo) {
-		this.whiteColumnTo = whiteColumnTo;
+	public void setLineFrom(String lineFrom) {
+		this.lineFrom = lineFrom;
 	}
 
-	public String getWhiteLineTo() {
-		return whiteLineTo;
+	public String getColumnTo() {
+		return columnTo;
 	}
 
-	public void setWhiteLineTo(String whiteLineTo) {
-		this.whiteLineTo = whiteLineTo;
+	public void setColumnTo(String columnTo) {
+		this.columnTo = columnTo;
 	}
 
-	public String getBlackPiece() {
-		return blackPiece;
+	public String getLineTo() {
+		return lineTo;
 	}
 
-	public void setBlackPiece(String blackPiece) {
-		this.blackPiece = blackPiece;
-	}
-
-	public String getBlackColumnFrom() {
-		return blackColumnFrom;
-	}
-
-	public void setBlackColumnFrom(String blackColumnFrom) {
-		this.blackColumnFrom = blackColumnFrom;
-	}
-
-	public String getBlackLineFrom() {
-		return blackLineFrom;
-	}
-
-	public void setBlackLineFrom(String blackLineFrom) {
-		this.blackLineFrom = blackLineFrom;
-	}
-
-	public String getBlackColumnTo() {
-		return blackColumnTo;
-	}
-
-	public void setBlackColumnTo(String blackColumnTo) {
-		this.blackColumnTo = blackColumnTo;
-	}
-
-	public String getBlackLineTo() {
-		return blackLineTo;
-	}
-
-	public void setBlackLineTo(String blackLineTo) {
-		this.blackLineTo = blackLineTo;
+	public void setLineTo(String lineTo) {
+		this.lineTo = lineTo;
 	}
 
 }
