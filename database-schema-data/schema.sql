@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS openings;
 
 create table openings (
 	id BIGSERIAL NOT NULL PRIMARY KEY,
-	name VARCHAR(100)
+	name VARCHAR(100),
+	UNIQUE(name)
 );
 create table relations (
 	id BIGSERIAL NOT NULL PRIMARY KEY,
@@ -15,14 +16,10 @@ create table moves (
 	id BIGSERIAL NOT NULL PRIMARY KEY,
 	opening_id BIGINT REFERENCES openings (id) NOT NULL,
 	move_number BIGINT NOT NULL,
-	white_piece VARCHAR(50),
-	white_column_from VARCHAR(50),
-	white_line_from VARCHAR(50),
-	white_column_to VARCHAR(50),
-	white_line_to VARCHAR(50),
-	black_piece VARCHAR(50),
-	black_column_from VARCHAR(50),
-	black_line_from VARCHAR(50),
-	black_column_to VARCHAR(50),
-	black_line_to VARCHAR(50)
+	color VARCHAR(50),
+	piece VARCHAR(50),
+	column_from VARCHAR(50),
+	line_from VARCHAR(50),
+	column_to VARCHAR(50),
+	line_to VARCHAR(50)
 );
