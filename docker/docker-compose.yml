@@ -1,0 +1,49 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: "3.8"
+
+# Define services
+services:
+
+  # PostgreSQL DataBase for the application
+  chessopenings-db:
+    image: thomasgourouza/chessopenings-db:postgres
+    container_name: chessopenings-db
+    # Volume mounted for database for the storage
+    volumes:
+      - data-chessopenings:/var/lib/postgresql/data
+    ports: 
+      - 5050:5432 # Forward the exposed port 5432 on the container to port 5050 on the host machine
+    # Environment variable
+    environment: 
+      - PGDATA=data-chessopenings
+
+  # Backend Spring Boot application
+  chessopenings-back:
+    # Either use image or build
+    image: thomasgourouza/chessopenings-backend:springboot
+    # build: ../chessopenings/
+    container_name: chessopenings-back
+    # Environment variables for Spring Boot Application.
+    environment: 
+      - DB_SERVER=chessopenings-db
+      - POSTGRES_DB=chessopenings
+      - POSTGRES_USER=cavalierfou
+      - POSTGRES_PASSWORD=db780345
+    ports: 
+      - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    links: 
+      - chessopenings-db
+
+  # Frontend Angular 11 application
+  # chessopenings-front:
+  #   image: thomasgourouza/chessopenings-frontend:angular11
+  #   container_name: chessopenings-front
+  #   ports:
+  #     - 4200:80
+  #   links:
+  #     - chessopenings-back
+
+#Volumes for DB data
+volumes:
+  data-chessopenings:
+    driver: local
