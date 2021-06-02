@@ -1,15 +1,13 @@
 package com.cavalierfou.chessopenings.controller;
 
 import java.util.List;
-
 import com.cavalierfou.chessopenings.customentity.OpeningCustom;
-import com.cavalierfou.chessopenings.entity.Opening;
 import com.cavalierfou.chessopenings.service.OpeningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
-// import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +23,7 @@ class OpeningController {
     @Autowired
     private OpeningService openingService;
 
-    // @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("{id}")
     public ResponseEntity<OpeningCustom> getById(@PathVariable("id") Long id) {
         var existingOpening = openingService.findById(id);
@@ -36,6 +34,7 @@ class OpeningController {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public ResponseEntity<List<OpeningCustom>> getPlayers(
             @RequestParam(value = "name", required = false) String name) {
@@ -50,7 +49,7 @@ class OpeningController {
         }
     }
 
-    // @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public ResponseEntity<HttpStatus> create(@RequestBody OpeningCustom openingToSave) {
         try {
@@ -61,7 +60,7 @@ class OpeningController {
         }
     }
 
-    // @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> delete(@PathVariable("id") Long id) {
         if (openingService.isPresent(id)) {
