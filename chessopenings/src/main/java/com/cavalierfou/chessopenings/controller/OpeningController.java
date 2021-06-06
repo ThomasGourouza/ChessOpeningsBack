@@ -36,7 +36,7 @@ class OpeningController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
-    public ResponseEntity<List<OpeningCustom>> getPlayers(
+    public ResponseEntity<List<OpeningCustom>> get(
             @RequestParam(value = "name", required = false) String name) {
         try {
             List<OpeningCustom> openings = openingService.find(name);

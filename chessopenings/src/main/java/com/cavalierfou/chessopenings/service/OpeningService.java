@@ -47,7 +47,7 @@ public class OpeningService {
         if (openings.isEmpty()) {
             return openingCustoms;
         }
-        openings.forEach(player -> openingCustoms.add(mapToCustom(player)));
+        openings.forEach(opening -> openingCustoms.add(mapToCustom(opening)));
 
         return openingCustoms;
     }
@@ -58,7 +58,7 @@ public class OpeningService {
         OpeningCustom openingCustom = new OpeningCustom();
 
         Relation parentRelation = relationJpaRepository.findByChildOpeningId(openingId);
-        Long parentOpeningId = parentRelation != null ? parentRelation.getId() : null;
+        Long parentOpeningId = parentRelation != null ? parentRelation.getParentOpeningId() : null;
 
         List<Relation> childRelation = relationJpaRepository.findByParentOpeningId(openingId);
         List<Long> childOpeningIds = childRelation.stream().map(relation -> relation.getChildOpeningId())
