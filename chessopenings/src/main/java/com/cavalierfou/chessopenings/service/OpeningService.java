@@ -132,6 +132,17 @@ public class OpeningService {
     }
 
     public void delete(Long id) {
+        Optional<Opening> existingOpeningOptional = openingJpaRepository.findById(id);
+        if (existingOpeningOptional.isPresent()) {
+            List<Long> childOpeningIds = mapToCustom(existingOpeningOptional.get()).getChildOpeningIds();
+            if (!childOpeningIds.isEmpty()) {
+                childOpeningIds.forEach(childId -> delete(childId));
+            }
+        }
+        deleteOpening(id);
+    }
+
+    private void deleteOpening(Long id) {
         jdbcRepository.delete(Constant.R.getValue(), Constant.POID.getValue(), id.toString());
         jdbcRepository.delete(Constant.R.getValue(), Constant.COID.getValue(), id.toString());
         jdbcRepository.delete(Constant.M.getValue(), Constant.OID.getValue(), id.toString());
