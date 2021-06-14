@@ -34,14 +34,14 @@ services:
     links: 
       - chessopenings-db
 
-  # Frontend Angular 11 application
-  # chessopenings-front:
-  #   image: thomasgourouza/chessopenings-frontend:angular11
-  #   container_name: chessopenings-front
-  #   ports:
-  #     - 4200:80
-  #   links:
-  #     - chessopenings-back
+  Frontend Angular 11 application
+  chessopenings-front:
+    image: thomasgourouza/chessopenings-frontend:angular11
+    container_name: chessopenings-front
+    ports:
+      - 4200:80
+    links:
+      - chessopenings-back
 
 #Volumes for DB data
 volumes:
