@@ -34,7 +34,7 @@ services:
     links: 
       - chessopenings-db
 
-  Frontend Angular 11 application
+  # Frontend Angular 11 application
   chessopenings-front:
     image: thomasgourouza/chessopenings-frontend:angular11
     container_name: chessopenings-front
